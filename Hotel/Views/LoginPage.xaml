@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Hotel.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout Padding="40,0,40,0" VerticalOptions="Center">
+            <Label Text="Logowanie"></Label>
+            <Entry Placeholder="E-mail" PlaceholderColor="{StaticResource Primary}" x:Name="emailEntry" TextColor="{StaticResource Primary}"/>
+            <Entry Placeholder="Hasło" PlaceholderColor="{StaticResource Primary}" x:Name="passwordEntry" IsPassword="True" TextColor="{StaticResource Primary}"/>
+
+
+            <RelativeLayout Padding="25">
+                <CheckBox Color="{StaticResource Primary}" IsChecked="False"/>
+                <Label Text="Pokaż hasło" TextColor="{StaticResource Primary}" FontSize="14"
+                       RelativeLayout.XConstraint="50" RelativeLayout.YConstraint="6"/>
+                <Button Text="Zapominałeś hasła?" TextColor="{StaticResource Primary}" BackgroundColor="Transparent" FontSize="14"
+                       RelativeLayout.XConstraint="170" RelativeLayout.YConstraint="-8"  TextTransform="None"></Button>
+            </RelativeLayout>
+
+            <StackLayout Padding="0, 40">
+                <Button VerticalOptions="Center" Text="Zaloguj się" Clicked="OnClickedLogin" CornerRadius="15" />
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Lista użytkowników"></Label>
+                <CollectionView x:Name="collectionView">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Label Text="{Binding Name}"
+                                    FontSize="Medium" />
+                                <Label Text="{Binding Email}"                                    
+                                    FontSize="Small" />
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+
+
+            <RelativeLayout Padding="5">
+                <Label Text="Nie masz konta?" TextColor="{StaticResource Primary}" FontSize="14"
+                    RelativeLayout.XConstraint="0" RelativeLayout.YConstraint="6"/>
+                <Button Text="Zarejestruj się teraz!"  FontSize="14" CornerRadius="15"
+                    RelativeLayout.XConstraint="170" RelativeLayout.YConstraint="-8"  TextTransform="None" Command="{Binding GoToRegisterCommand}" />
+            </RelativeLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

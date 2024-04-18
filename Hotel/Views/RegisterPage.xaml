@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             x:Class="Hotel.Views.RegisterPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout Padding="40,0,40,0" VerticalOptions="Center">
+            <Label Text="Rejestracja"></Label>
+            <Entry Placeholder="Imię i nazwisko" PlaceholderColor="{StaticResource Primary}" x:Name="nameEntry" TextColor="{StaticResource Primary}"/>
+            <Entry Placeholder="E-mail" PlaceholderColor="{StaticResource Primary}" x:Name="emailEntry" TextColor="{StaticResource Primary}"/>
+            <Entry Placeholder="Hasło" PlaceholderColor="{StaticResource Primary}" x:Name="passwordEntry" IsPassword="True" TextColor="{StaticResource Primary}"/>
+            <Entry Placeholder="Powtórz Hasło" PlaceholderColor="{StaticResource Primary}" x:Name="confirmEntry" IsPassword="True" TextColor="{StaticResource Primary}"/>
+
+            <RelativeLayout Padding="25">
+                <CheckBox Color="{StaticResource Primary}" IsChecked="False"/>
+                <Label Text="Pokaż hasło" TextColor="{StaticResource Primary}" FontSize="14"
+                   RelativeLayout.XConstraint="50" RelativeLayout.YConstraint="6"/>
+            </RelativeLayout>
+
+            <StackLayout Padding="0, 40">
+                <Button VerticalOptions="Center" Text="Zarejestruj się" Clicked="OnClickRegister" CornerRadius="15" />
+            </StackLayout>
+
+            <RelativeLayout Padding="5">
+                <Label Text="Masz już konto?" TextColor="{StaticResource Primary}" FontSize="14"
+                RelativeLayout.XConstraint="0" RelativeLayout.YConstraint="6"/>
+                <Button Text="Zaloguj się teraz!" FontSize="14" CornerRadius="15"
+                RelativeLayout.XConstraint="170" RelativeLayout.YConstraint="-8"  TextTransform="None" Command="{Binding GoToLoginCommand}" />
+            </RelativeLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
