@@ -21,7 +21,7 @@ namespace Hotel.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            collectionView.ItemsSource = await App.Database.GetUserAsync();
+            collectionUser.ItemsSource = await App.Database.GetUserAsync();
         }
 
         private async void OnClickedLogin(object sender, EventArgs e)
@@ -38,19 +38,29 @@ namespace Hotel.Views
                 if (user.Password == passwordEntry.Text)
                 {
                     // Jeśli hasło jest poprawne, przejdź do następnej strony (np. AboutPage)
+                    App.Current.Properties["name"] = user.Name;
+                    App.Current.Properties["IsLoggedIn"] = true;
+                    emailEntry.Text = passwordEntry.Text = string.Empty;
                     await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
                 }
                 else
                 {
                     // Jeśli hasło jest niepoprawne, wyświetl komunikat
+                    emailEntry.Text = passwordEntry.Text = string.Empty;
                     await DisplayAlert("Błąd logowania", "Niepoprawne hasło", "OK");
                 }
             }
             else
             {
                 // Jeśli użytkownik o podanym adresie e-mail nie istnieje, wyświetl komunikat
+                emailEntry.Text = passwordEntry.Text = string.Empty;
                 await DisplayAlert("Błąd logowania", "Użytkownik o podanym adresie e-mail nie istnieje", "OK");
             }
+        }
+
+        private async void OnClickedRegister(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(RegisterPage));
         }
 
     }

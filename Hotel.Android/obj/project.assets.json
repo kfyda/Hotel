@@ -3878,11 +3878,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel.Android\\Hotel.Android.csproj",
+      "projectUniqueName": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel-main\\Hotel.Android\\Hotel.Android.csproj",
       "projectName": "Hotel.Android",
-      "projectPath": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel.Android\\Hotel.Android.csproj",
+      "projectPath": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel-main\\Hotel.Android\\Hotel.Android.csproj",
       "packagesPath": "C:\\Users\\kamil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel.Android\\obj\\",
+      "outputPath": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel-main\\Hotel.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3903,8 +3903,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Hotel.csproj": {
-              "projectPath": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Hotel.csproj"
+            "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel-main\\Hotel\\Hotel.csproj": {
+              "projectPath": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel-main\\Hotel\\Hotel.csproj"
             }
           }
         }

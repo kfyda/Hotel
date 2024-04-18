@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ceq3uicArCQgZR95ZfUIOivVrJa8sDK1cjDVXxIQGwVML4kzEpSaYKhb7cw2WzMlvFBvu3br2cl0Pnw/Yxlhbw==",
+  "dgSpecHash": "YifMAjavRG3A90GmYkFIqZ43PTC2+SOvy2Yuv76K/SO0+DmmPaVpIXU4sCs9wy0C19cZki6Te9/0N4rBrLAx1g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel.Android\\Hotel.Android.csproj",
+  "projectFilePath": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel-main\\Hotel.Android\\Hotel.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kamil\\.nuget\\packages\\refractored.mvvmhelpers\\1.6.2\\refractored.mvvmhelpers.1.6.2.nupkg.sha512",
     "C:\\Users\\kamil\\.nuget\\packages\\sqlite-net-pcl\\1.9.172\\sqlite-net-pcl.1.9.172.nupkg.sha512",

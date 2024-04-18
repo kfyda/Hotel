@@ -81,8 +81,8 @@
     <FlyoutItem Title="Strona główna" Icon="icon_about.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Umówione wizyty" Icon="icon_feed.png">
-        <ShellContent Route="VisitPage" ContentTemplate="{DataTemplate local:VisitPage}" />
+    <FlyoutItem Title="Pokoje" Icon="icon_feed.png">
+        <ShellContent Route="RoomsPage" ContentTemplate="{DataTemplate local:RoomsPage}" />
     </FlyoutItem>
     <FlyoutItem Title="Cennik" Icon="icon_feed.png">
         <ShellContent Route="PriceListPage" ContentTemplate="{DataTemplate local:PriceListPage}" />

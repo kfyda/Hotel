@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Hotel.Views.RoomsPage">
+    <ContentPage.Content>
+        <ListView x:Name="MyListView"
+                  ItemsSource="{Binding Items}"
+                  ItemTapped="Handle_ItemTapped"
+                  CachingStrategy="RecycleElement">
+            <!-- Custom View Cells -->
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Spacing="10">
+                            <Label Text="{Binding Type}" VerticalOptions="CenterAndExpand" />
+                            <Button Text="Usuń" Clicked="OnDeleteButtonClicked" CommandParameter="{Binding .}" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

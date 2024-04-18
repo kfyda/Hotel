@@ -16,7 +16,7 @@ namespace Hotel
             {
                 if (database == null)
                 {
-                    database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "GabinetStomatologiczny.db3"));
+                    database = new Database(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Hotel.db3"));
                 }
 
                 return database;
@@ -43,3 +43,4 @@ namespace Hotel
         }
     }
 }
+
