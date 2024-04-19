@@ -41,3 +41,5 @@ C:\Users\kamil\OneDrive\Pulpit\Hotel-main\Hotel\obj\Debug\netstandard2.0\Hotel.d
 C:\Users\kamil\OneDrive\Pulpit\Hotel-main\Hotel\obj\Debug\netstandard2.0\refint\Hotel.dll
 C:\Users\kamil\OneDrive\Pulpit\Hotel-main\Hotel\obj\Debug\netstandard2.0\Hotel.pdb
 C:\Users\kamil\OneDrive\Pulpit\Hotel-main\Hotel\obj\Debug\netstandard2.0\Views\RoomsPage.xaml.g.cs
+C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel\obj\Debug\netstandard2.0\Views\RoomsPage.xaml.g.cs
+C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel\obj\Debug\netstandard2.0\Hotel.sourcelink.json

@@ -28,10 +28,11 @@ namespace Hotel.ViewModels
             Rooms = new ObservableCollection<Room>();
         }
 
-        public void AddRoom(string type)
+        public void AddRoom(string type, DateTime reservationDate)
         {
-            int id = Rooms.Any() ? Rooms.Max(r => r.Id) + 1 : 1;
-            Rooms.Add(new Room(id, type));
+            int id = Rooms.Count + 1; // Automatyczne przypisywanie ID
+            var room = new Room(id, type, reservationDate); // Utworzenie nowego pokoju z datą rezerwacji
+            Rooms.Add(room); // Dodanie pokoju do listy
         }
 
         public void RemoveRoom(Room room)

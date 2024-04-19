@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Hotel.Models
 {
@@ -8,11 +6,13 @@ namespace Hotel.Models
     {
         public int Id { get; set; }
         public string Type { get; set; } // Jednoosobowy, Dwuosobowy, Trzyosobowy
+        public DateTime ReservationDate { get; set; } // Data rezerwacji
 
-        public Room(int id, string type)
+        public Room(int id, string type, DateTime reservationDate)
         {
             Id = id;
             Type = type;
+            ReservationDate = reservationDate;
         }
     }
 }

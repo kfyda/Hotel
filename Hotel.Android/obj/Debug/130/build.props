@@ -25,11 +25,11 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=638490610582539017
+_nugetassetstimestamp=638491361508245531
 typemapkind=strings-asm
 androidsupportedabis=arm64-v8a
 armeabi-v7a
 x86
 x86_64
 androidmanifestplaceholders=
-projectfullpath=c:\users\kamil\onedrive\pulpit\hotel-main\hotel.android\hotel.android.csproj
+projectfullpath=c:\users\kamil\onedrive\pulpit\hotel\hotel.android\hotel.android.csproj
