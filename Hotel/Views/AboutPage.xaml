@@ -51,6 +51,11 @@
                         BackgroundColor="{StaticResource Primary}"
                         CornerRadius="15"
                         TextColor="White" />
+
+                <Button Text="Kontakt"
+                        Clicked="OnContactButtonClicked"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand" />
             </StackLayout>
         </ScrollView>
     </Grid>

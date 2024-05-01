@@ -11,9 +11,14 @@ namespace Hotel.ViewModels
         public AboutViewModel()
         {
             Title = "Strona główna";
-            OpenWebCommand = new Command(async () => await Shell.Current.GoToAsync(nameof(NewVisitPage)));
+            OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamarin-quickstart"));
+            PhoneNumber = "123456789";
+            StreetName = "Jagiellońska 1";
+            CompanyName = "Hotel-Kamilos";
         }
-
+        public string PhoneNumber { get; set; }
+        public string StreetName { get; set; }
+        public string CompanyName { get; set; }
         public ICommand OpenWebCommand { get; }
     }
 }

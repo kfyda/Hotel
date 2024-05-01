@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|c:\\users\\kamil\\onedrive\\pulpit\\hotel\\hotel\\views\\roomspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|solutionrelative:hotel\\views\\roomspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|c:\\users\\kamil\\onedrive\\pulpit\\hotel\\hotel\\views\\pricelistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|solutionrelative:hotel\\views\\pricelistpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|c:\\users\\kamil\\onedrive\\pulpit\\hotel\\hotel\\viewmodels\\roomsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|solutionrelative:hotel\\viewmodels\\roomsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|c:\\users\\kamil\\onedrive\\pulpit\\hotel\\hotel\\views\\pricelistpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|solutionrelative:hotel\\views\\pricelistpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|c:\\users\\kamil\\onedrive\\pulpit\\hotel\\hotel\\views\\roomspage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
-      "RelativeMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|solutionrelative:hotel\\views\\roomspage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+      "AbsoluteMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|c:\\users\\kamil\\onedrive\\pulpit\\hotel\\hotel\\views\\aboutpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|solutionrelative:hotel\\views\\aboutpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|c:\\users\\kamil\\onedrive\\pulpit\\hotel\\hotel\\models\\roomwithdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|solutionrelative:hotel\\models\\roomwithdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|c:\\users\\kamil\\onedrive\\pulpit\\hotel\\hotel\\viewmodels\\aboutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|solutionrelative:hotel\\viewmodels\\aboutviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|c:\\users\\kamil\\onedrive\\pulpit\\hotel\\hotel\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|solutionrelative:hotel\\models\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|c:\\users\\kamil\\onedrive\\pulpit\\hotel\\hotel\\views\\aboutpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|solutionrelative:hotel\\views\\aboutpage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|c:\\users\\kamil\\onedrive\\pulpit\\hotel\\hotel\\views\\mapspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|solutionrelative:hotel\\views\\mapspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|c:\\users\\kamil\\onedrive\\pulpit\\hotel\\hotel\\views\\mapspage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}",
+      "RelativeMoniker": "D:0:0:{2EF6D134-76C2-4BC3-B08A-338F1588DEA5}|Hotel\\Hotel.csproj|solutionrelative:hotel\\views\\mapspage.xaml||{2974C621-7033-421A-B08A-11D27B021D1B}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +38,96 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RoomWithDate.cs",
-              "DocumentMoniker": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Models\\RoomWithDate.cs",
-              "RelativeDocumentMoniker": "Hotel\\Models\\RoomWithDate.cs",
-              "ToolTip": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Models\\RoomWithDate.cs",
-              "RelativeToolTip": "Hotel\\Models\\RoomWithDate.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T16:16:57.639Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RoomsPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Views\\RoomsPage.xaml.cs",
-              "RelativeDocumentMoniker": "Hotel\\Views\\RoomsPage.xaml.cs",
-              "ToolTip": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Views\\RoomsPage.xaml.cs",
-              "RelativeToolTip": "Hotel\\Views\\RoomsPage.xaml.cs",
-              "ViewState": "AQIAAGAAAAAAAAAAAAAwwG0AAAAgAAAA",
+              "Title": "PriceListPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Views\\PriceListPage.xaml.cs",
+              "RelativeDocumentMoniker": "Hotel\\Views\\PriceListPage.xaml.cs",
+              "ToolTip": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Views\\PriceListPage.xaml.cs",
+              "RelativeToolTip": "Hotel\\Views\\PriceListPage.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T16:53:25.534Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RoomsPage.xaml",
-              "DocumentMoniker": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Views\\RoomsPage.xaml",
-              "RelativeDocumentMoniker": "Hotel\\Views\\RoomsPage.xaml",
-              "ToolTip": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Views\\RoomsPage.xaml",
-              "RelativeToolTip": "Hotel\\Views\\RoomsPage.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-18T16:52:56.661Z",
+              "WhenOpened": "2024-05-01T07:59:30.894Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "RoomsViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\ViewModels\\RoomsViewModel.cs",
-              "RelativeDocumentMoniker": "Hotel\\ViewModels\\RoomsViewModel.cs",
-              "ToolTip": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\ViewModels\\RoomsViewModel.cs",
-              "RelativeToolTip": "Hotel\\ViewModels\\RoomsViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAJAAAA",
+              "Title": "PriceListPage.xaml",
+              "DocumentMoniker": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Views\\PriceListPage.xaml",
+              "RelativeDocumentMoniker": "Hotel\\Views\\PriceListPage.xaml",
+              "ToolTip": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Views\\PriceListPage.xaml",
+              "RelativeToolTip": "Hotel\\Views\\PriceListPage.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-01T07:59:28.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AboutViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\ViewModels\\AboutViewModel.cs",
+              "RelativeDocumentMoniker": "Hotel\\ViewModels\\AboutViewModel.cs",
+              "ToolTip": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\ViewModels\\AboutViewModel.cs",
+              "RelativeToolTip": "Hotel\\ViewModels\\AboutViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T16:51:33.887Z",
+              "WhenOpened": "2024-05-01T07:51:16.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AboutPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Views\\AboutPage.xaml.cs",
+              "RelativeDocumentMoniker": "Hotel\\Views\\AboutPage.xaml.cs",
+              "ToolTip": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Views\\AboutPage.xaml.cs",
+              "RelativeToolTip": "Hotel\\Views\\AboutPage.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T07:49:28.617Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Room.cs",
-              "DocumentMoniker": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Models\\Room.cs",
-              "RelativeDocumentMoniker": "Hotel\\Models\\Room.cs",
-              "ToolTip": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Models\\Room.cs",
-              "RelativeToolTip": "Hotel\\Models\\Room.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAPAAAA",
+              "Title": "AboutPage.xaml",
+              "DocumentMoniker": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Views\\AboutPage.xaml",
+              "RelativeDocumentMoniker": "Hotel\\Views\\AboutPage.xaml",
+              "ToolTip": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Views\\AboutPage.xaml",
+              "RelativeToolTip": "Hotel\\Views\\AboutPage.xaml",
+              "ViewState": "AQIAACMAAAAAAAAAAAAmwD8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-05-01T07:49:19.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MapsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Views\\MapsPage.xaml",
+              "RelativeDocumentMoniker": "Hotel\\Views\\MapsPage.xaml",
+              "ToolTip": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Views\\MapsPage.xaml",
+              "RelativeToolTip": "Hotel\\Views\\MapsPage.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-26T17:30:35.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MapsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Views\\MapsPage.xaml.cs",
+              "RelativeDocumentMoniker": "Hotel\\Views\\MapsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Views\\MapsPage.xaml.cs",
+              "RelativeToolTip": "Hotel\\Views\\MapsPage.xaml.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAgwEgAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-18T16:50:27.623Z",
+              "WhenOpened": "2024-04-26T14:21:59.033Z",
               "EditorCaption": ""
             }
           ]

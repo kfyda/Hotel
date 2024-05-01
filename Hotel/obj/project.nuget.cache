@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "uX2KX9LH2tXKfAWTPqgemFl2xGZIw/jlI2wJEoo6kdjck9Xv1D7D4RqQsQCJjwWmINXsnRzUHIEJsPMo8R4rEw==",
+  "dgSpecHash": "fR74MBbv4XKHZ50vUTGMXbPhpWYL2z3bYeXx4ikdeInn2ItOKTvWLg0qgcux7VsxSwq6QkfXIX2/Cl2H7G/oXw==",
   "success": true,
   "projectFilePath": "C:\\Users\\kamil\\OneDrive\\Pulpit\\Hotel\\Hotel\\Hotel.csproj",
   "expectedPackageFiles": [
@@ -18,8 +18,10 @@
     "C:\\Users\\kamil\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\kamil\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\kamil\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
+    "C:\\Users\\kamil\\.nuget\\packages\\xam.plugin.geolocator\\4.5.0.6\\xam.plugin.geolocator.4.5.0.6.nupkg.sha512",
     "C:\\Users\\kamil\\.nuget\\packages\\xamarin.essentials\\1.8.1\\xamarin.essentials.1.8.1.nupkg.sha512",
-    "C:\\Users\\kamil\\.nuget\\packages\\xamarin.forms\\5.0.0.2662\\xamarin.forms.5.0.0.2662.nupkg.sha512"
+    "C:\\Users\\kamil\\.nuget\\packages\\xamarin.forms\\5.0.0.2662\\xamarin.forms.5.0.0.2662.nupkg.sha512",
+    "C:\\Users\\kamil\\.nuget\\packages\\xamarin.forms.maps\\5.0.0.2662\\xamarin.forms.maps.5.0.0.2662.nupkg.sha512"
   ],
   "logs": []
 }
