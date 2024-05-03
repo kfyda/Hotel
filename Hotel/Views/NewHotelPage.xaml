@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Hotel.Views.NewHotelPage"
+             Title="{Binding Title}"
+             BackgroundColor="#192637">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="TextColor">White</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Label Text="Nazwa hotelu" TextColor="{StaticResource TextColor}" />
+        <Entry x:Name="nameEntry" TextColor="{StaticResource TextColor}" />
+
+        <Label Text="Miasto" TextColor="{StaticResource TextColor}" />
+        <Entry x:Name="cityEntry" TextColor="{StaticResource TextColor}" />
+
+        <Label Text="Ulica" TextColor="{StaticResource TextColor}" />
+        <Entry x:Name="streetEntry" TextColor="{StaticResource TextColor}" />
+
+        <Label Text="Numer Ulicy" TextColor="{StaticResource TextColor}" />
+        <Entry x:Name="streetNrEntry" TextColor="{StaticResource TextColor}" />
+
+        <Button Text="Dodaj hotel" Clicked="AddHotel" BackgroundColor="#0078d4" TextColor="{StaticResource TextColor}" />
+        <Button Text="Koordynaty" Clicked="CoordHotel" BackgroundColor="#0078d4" TextColor="{StaticResource TextColor}" />
+
+        <Picker ItemDisplayBinding="{Binding Name}" TextColor="{StaticResource TextColor}"
+        x:Name="hotelEntry"
+        Title="Wybierz hotel do usunięcia" />
+        <Button Text="Usuń" Clicked="DeleteHotel" BackgroundColor="#0078d4" TextColor="{StaticResource TextColor}" />
+
+
+        <Label x:Name="latitude" TextColor="{StaticResource TextColor}" />
+        <Label x:Name="longitude" TextColor="{StaticResource TextColor}" />
+
+        <StackLayout>
+            <Label Text="Lista hoteli" TextColor="#192637" />
+            <CollectionView x:Name="collectionHotel">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="{Binding Id}" FontSize="Medium" TextColor="#192637" />
+                            <Label Text="{Binding Name}" FontSize="Small" TextColor="White" />
+                            <Label Text="{Binding City}" FontSize="Small" TextColor="#192637" />
+                            <Label Text="{Binding Street}" FontSize="Small" TextColor="#192637" />
+                            <Label Text="{Binding StreetNr}" FontSize="Small" TextColor="#192637" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

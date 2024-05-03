@@ -28,6 +28,7 @@ namespace Hotel.Views
             InitializeComponent();
             _viewModel = new RoomsViewModel();
             BindingContext = _viewModel;
+            Title = "Pokoje";
 
             var addButton = new Button { Text = "Dodaj pokój", BackgroundColor = Color.Green, TextColor = Color.White };
             addButton.Clicked += OnAddButtonClicked;

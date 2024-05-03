@@ -52,23 +52,28 @@ namespace Hotel.Views
 
                 label.SetBinding(Label.TextProperty, new Binding("."));
                 label.HorizontalOptions = LayoutOptions.StartAndExpand;
+                label.TextColor = Color.White; // Ustawienie koloru tekstu na biały
+                label.Margin = new Thickness(20, 0, 0, 0); // Dodanie marginesu do etykiety
 
                 button.Text = "Zobacz";
-                button.BackgroundColor = Color.Black;
+                button.BackgroundColor = Color.Blue;
                 button.TextColor = Color.White;
+                button.Margin = new Thickness(20, 0, 0, 0); // Dodanie marginesu do przycisku
                 button.Clicked += async (sender, e) =>
                 {
-                    var roomType = label.Text;
-                    if (RoomDescriptions.ContainsKey(roomType))
+                    var clickedButton = (Button)sender; // Pobranie klikniętego przycisku
+                    if (clickedButton.Text == "Zobacz") // Sprawdzenie czy kliknięty przycisk to "Zobacz"
                     {
-                        await DisplayAlert(roomType, RoomDescriptions[roomType], "OK");
+                        var roomType = label.Text;
+                        if (RoomDescriptions.ContainsKey(roomType))
+                        {
+                            await DisplayAlert(roomType, RoomDescriptions[roomType], "OK");
+                        }
+                        else
+                        {
+                            await DisplayAlert("Błąd", "Nie można znaleźć opisu dla wybranego pokoju.", "OK");
+                        }
                     }
-                    else
-                    {
-                        await DisplayAlert("Błąd", "Nie można znaleźć opisu dla wybranego pokoju.", "OK");
-                    }
-
-                    
                 };
 
                 grid.Children.Add(label);

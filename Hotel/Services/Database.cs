@@ -17,6 +17,7 @@ namespace Hotel.Services
             _database.CreateTableAsync<User>();
             _database.CreateTableAsync<ServiceType>();
             _database.CreateTableAsync<Visit>();
+            _database.CreateTableAsync<Hotels>();
         }
 
         public Task<List<User>> GetUserAsync()
@@ -32,6 +33,20 @@ namespace Hotel.Services
         public Task<int> DeleteUserAsync(User user)
         {
             return _database.DeleteAsync(user);
+        }
+
+        public Task<List<Hotels>> GetHotelAsync()
+        {
+            return _database.Table<Hotels>().ToListAsync();
+        }
+
+        public Task<int> SaveHotelAsync(Hotels hotel)
+        {
+            return _database.InsertAsync(hotel);
+        }
+        public Task<int> DeleteHotelAsync(Hotels hotel)
+        {
+            return _database.DeleteAsync(hotel);
         }
     }
 }

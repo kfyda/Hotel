@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Hotel.Views.AboutPage"
              xmlns:vm="clr-namespace:Hotel.ViewModels"
@@ -11,53 +10,45 @@
 
     <ContentPage.Resources>
         <ResourceDictionary>
+            <Color x:Key="BackgroundColor">#192637</Color>
             <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="Primary">#0078d4</Color>
+            <Color x:Key="TextColor">White</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
-                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                    <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64" />
-                </ContentView>
+    <ScrollView BackgroundColor="{StaticResource BackgroundColor}">
+        <!-- Usunięcie zbędnego StackLayout -->
+        <StackLayout Padding="0" Spacing="0">
+            <!-- StackLayout dla reszty zawartości -->
+            <StackLayout HorizontalOptions="Center" Margin="0,20" BackgroundColor="{StaticResource BackgroundColor}">
+                <!-- StackLayout dla loga i tytułu -->
+                <Image Source="kamilos.png" VerticalOptions="Center" HeightRequest="300" />
+                <!-- Tytuł -->
             </StackLayout>
-        </StackLayout>
-        <ScrollView Grid.Row="1">
-            <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-                <Label Text="Hotel Kamilos :)" FontSize="Title"/>
-                <Label Text="Witamy na stronie naszego nowoczesnego Hotelu! 
-                       
-                       
-                       
-                       
-                       Zarezerwuj pokój dla siebie już teraz!" FontSize="16" Padding="0,0,0,0"/>
-                <!--<Label FontSize="16" Padding="0,24,0,0">
-                    <Label.FormattedText>
-                        <FormattedString>
-                            <FormattedString.Spans>
-                                <Span Text="Learn more at "/>
-                                <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                            </FormattedString.Spans>
-                        </FormattedString>
-                    </Label.FormattedText>
-                </Label>-->
-                <Button Margin="0,10,0,0" Text="ZAREZERWUJ POKÓJ"
+            <StackLayout Padding="60" BackgroundColor="{StaticResource BackgroundColor}">
+                <Label Text="Witamy na oficjalnej stronie naszego ekskluzywnego hotelu!"
+                       FontSize="17" 
+                       HorizontalOptions="Center" 
+                       VerticalOptions="Center" 
+                       TextColor="{StaticResource TextColor}"
+                       Padding="15,0,0,0" />
+
+                <!-- Treść informacyjna -->
+                <Button Margin="0,20,0,0" Text="ZAREZERWUJ POKÓJ JUŻ TERAZ!"
                         Command="{Binding OpenWebCommand}"
                         BackgroundColor="{StaticResource Primary}"
                         CornerRadius="15"
-                        TextColor="White" />
-
-                <Button Text="Kontakt"
-                        Clicked="OnContactButtonClicked"
-                        HorizontalOptions="Center"
-                        VerticalOptions="CenterAndExpand" />
+                        TextColor="{StaticResource TextColor}" />
+                <!-- Przycisk rezerwacji pokoju -->
             </StackLayout>
-        </ScrollView>
-    </Grid>
-
+            <Button Text="Kontakt"
+                    Clicked="OnContactButtonClicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"
+                    Margin="0,0,0,20"
+                    TextColor="{StaticResource TextColor}" />
+            <!-- Przycisk kontaktu -->
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

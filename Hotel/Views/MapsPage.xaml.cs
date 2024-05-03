@@ -8,6 +8,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
+using Plugin.Geolocator;
+using Hotel.Models;
 
 namespace Hotel.Views
 {
@@ -17,8 +19,8 @@ namespace Hotel.Views
         public MapsPage()
         {
             InitializeComponent();
-
-            Title = "Hotel u Kamila";
+            var hotels = App.Database.GetHotelAsync().Result;
+            Title = "Hotel Kamilos";
 
             // Utwórz mapę
             Xamarin.Forms.Maps.Map map = new Xamarin.Forms.Maps.Map
@@ -27,52 +29,68 @@ namespace Hotel.Views
                 MoveToLastRegionOnLayoutChange = false
             };
 
-            // Zdefiniuj współrzędne geograficzne dla Nowego Sącza
-            double newSaczLatitude = 49.6225; // Szerokość geograficzna
-            double newSaczLongitude = 20.7147; // Długość geograficzna
-
-            // Utwórz punkt na mapie dla Nowego Sącza
-            Pin pin = new Pin
+            // Ustaw punkt startowy na bieżącą lokalizację
+            Device.BeginInvokeOnMainThread(async () =>
             {
-                Label = "Nowy Sącz",
-                Address = "ul. Bolesława Limanowskiego 1, Nowy Sącz", // Adres
-                Type = PinType.Place,
-                Position = new Position(newSaczLatitude, newSaczLongitude) // Ustawienie współrzędnych geograficznych
-            };
+                var locator = CrossGeolocator.Current;
+                locator.DesiredAccuracy = 50;
 
-            pin.Clicked += async (sender, e) =>
+                var position = await locator.GetPositionAsync(TimeSpan.FromSeconds(10));
+                map.MoveToRegion(MapSpan.FromCenterAndRadius(
+                    new Position(position.Latitude, position.Longitude), Distance.FromKilometers(1)));
+            });
+
+            foreach (var hotel in hotels)
             {
-                try
+                string address = hotel.City + " " + hotel.Street + " " + hotel.StreetNr;
+                // Utwórz punkt na mapie
+                Pin pin = new Pin
                 {
-                    var currentLocation = await Geolocation.GetLastKnownLocationAsync();
-                    if (currentLocation != null)
+                    Label = hotel.Name,
+                    Address = address,
+                    Type = PinType.Place,
+                    Position = new Position(hotel.Latitude, hotel.Longitude)
+                };
+
+                pin.MarkerClicked += async (sender, e) =>
+                {
+                    try
                     {
-                        var placemarks = await Geocoding.GetPlacemarksAsync(currentLocation.Latitude, currentLocation.Longitude);
-                        var placemark = placemarks?.FirstOrDefault();
-                        if (placemark != null)
+                        var currentLocation = await Geolocation.GetLastKnownLocationAsync();
+                        if (currentLocation != null)
                         {
-                            var locationUri = $"https://www.google.com/maps/dir/{placemark.FeatureName},{placemark.Thoroughfare},{placemark.SubThoroughfare},{placemark.Locality},{placemark.AdminArea}";
-                            await Launcher.OpenAsync(new Uri(locationUri));
+                            var currentPlacemarks = await Geocoding.GetPlacemarksAsync(currentLocation.Latitude, currentLocation.Longitude);
+                            var currentPlacemark = currentPlacemarks?.FirstOrDefault();
+
+                            var pinPlacemarks = await Geocoding.GetPlacemarksAsync(pin.Position.Latitude, pin.Position.Longitude);
+                            var pinPlacemark = pinPlacemarks?.FirstOrDefault();
+
+                            if (currentPlacemark != null && pinPlacemark != null)
+                            {
+                                var currentAddress = $"{currentPlacemark.FeatureName},{currentPlacemark.SubThoroughfare},{currentPlacemark.Thoroughfare},{currentPlacemark.Locality},{currentPlacemark.AdminArea}";
+                                var pinAddress = $"{pinPlacemark.FeatureName},{pinPlacemark.SubThoroughfare},{pinPlacemark.Thoroughfare},{pinPlacemark.Locality},{pinPlacemark.AdminArea}";
+
+                                var locationUri = $"https://www.google.com/maps/dir/{Uri.EscapeDataString(currentAddress)}/{Uri.EscapeDataString(pinAddress)}";
+                                await Launcher.OpenAsync(new Uri(locationUri));
+                            }
+                            else
+                            {
+                                await DisplayAlert("Błąd", "Nie można uzyskać adresu dla jednego z punktów.", "OK");
+                            }
                         }
                         else
                         {
-                            await DisplayAlert("Błąd", "Nie można uzyskać adresu dla aktualnych współrzędnych.", "OK");
+                            await DisplayAlert("Błąd", "Nie można uzyskać aktualnych współrzędnych.", "OK");
                         }
                     }
-                    else
+                    catch (Exception ex)
                     {
-                        await DisplayAlert("Błąd", "Nie można uzyskać aktualnych współrzędnych.", "OK");
+                        await DisplayAlert("Błąd", $"Wystąpił błąd: {ex.Message}", "OK");
                     }
-                }
-                catch (Exception ex)
-                {
-                    await DisplayAlert("Błąd", $"Wystąpił błąd: {ex.Message}", "OK");
-                }
-            };
-
-            // Dodaj punkt do mapy
-            map.Pins.Add(pin);
-
+                };
+                // Dodaj punkt do mapy
+                map.Pins.Add(pin);
+            }
             // Ustaw mapę jako zawartość strony
             Content = new StackLayout
             {

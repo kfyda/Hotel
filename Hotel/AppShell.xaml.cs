@@ -13,6 +13,7 @@ namespace Hotel
             InitializeComponent();
             Routing.RegisterRoute(nameof(RegisterPage), typeof(RegisterPage));
             Routing.RegisterRoute(nameof(NewVisitPage), typeof(NewVisitPage));
+            Routing.RegisterRoute(nameof(RoomsPage), typeof(RoomsPage));
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)
