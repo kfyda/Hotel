@@ -22,8 +22,17 @@ namespace Hotel.Views
 
         private async void OnClickRegister(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(nameEntry.Text) && !string.IsNullOrWhiteSpace(emailEntry.Text))
+            if (!string.IsNullOrWhiteSpace(nameEntry.Text) &&
+                !string.IsNullOrWhiteSpace(emailEntry.Text) &&
+                !string.IsNullOrWhiteSpace(passwordEntry.Text) &&
+                !string.IsNullOrWhiteSpace(confirmEntry.Text))
             {
+                if (passwordEntry.Text != confirmEntry.Text)
+                {
+                    await DisplayAlert("Błąd", "Hasła nie pasują do siebie.", "OK");
+                    return;
+                }
+
                 await App.Database.SaveUserAsync(new User
                 {
                     Name = nameEntry.Text,
@@ -33,11 +42,15 @@ namespace Hotel.Views
 
                 await Shell.Current.GoToAsync($"//{nameof(AboutPage)}");
             }
+            else
+            {
+                await DisplayAlert("Błąd", "Wszystkie pola muszą być wypełnione.", "OK");
+            }
         }
 
-        //async void registerValidation(object sender, EventArgs e)
-        //{
-
-        //}
+        private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            passwordEntry.IsPassword = !e.Value;
+        }
     }
 }

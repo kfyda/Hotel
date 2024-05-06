@@ -1482,3 +1482,4 @@ C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel.Android\obj\Debug\130\androidx\progua
 C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel.Android\obj\Debug\130\androidx\proguard\d1c33b04-2ccd-4170-b861-f18705e759f7.txt
 C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel.Android\obj\Debug\130\androidx\proguard\dfb8d1fb-bb1d-47bd-a1b0-b2aaa687cba8.txt
 C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel.Android\obj\Debug\130\androidx\proguard\e33dea6b-7811-4f7e-965a-c8979ba5635c.txt
+C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel.Android\obj\Debug\130\res\drawable\tlo.jpg

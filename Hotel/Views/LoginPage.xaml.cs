@@ -63,5 +63,10 @@ namespace Hotel.Views
             await Shell.Current.GoToAsync(nameof(RegisterPage));
         }
 
+        private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            passwordEntry.IsPassword = !e.Value;
+        }
+
     }
 }

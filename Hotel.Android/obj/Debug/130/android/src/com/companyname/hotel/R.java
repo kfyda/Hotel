@@ -9814,9 +9814,10 @@ public final class R {
     public static final int preference_list_divider_material=0x7f0700a4;
     public static final int test_custom_background=0x7f0700a5;
     public static final int test_level_drawable=0x7f0700a6;
-    public static final int tooltip_frame_dark=0x7f0700a7;
-    public static final int tooltip_frame_light=0x7f0700a8;
-    public static final int xamarin_logo=0x7f0700a9;
+    public static final int tlo=0x7f0700a7;
+    public static final int tooltip_frame_dark=0x7f0700a8;
+    public static final int tooltip_frame_light=0x7f0700a9;
+    public static final int xamarin_logo=0x7f0700aa;
   }
   public static final class id {
     public static final int ALT=0x7f080000;

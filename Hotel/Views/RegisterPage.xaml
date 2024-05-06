@@ -1,34 +1,102 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              x:Class="Hotel.Views.RegisterPage"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
-        <StackLayout Padding="40,0,40,0" VerticalOptions="Center">
-            <Label Text="Rejestracja"></Label>
-            <Entry Placeholder="Imię i nazwisko" PlaceholderColor="{StaticResource Primary}" x:Name="nameEntry" TextColor="{StaticResource Primary}"/>
-            <Entry Placeholder="E-mail" PlaceholderColor="{StaticResource Primary}" x:Name="emailEntry" TextColor="{StaticResource Primary}"/>
-            <Entry Placeholder="Hasło" PlaceholderColor="{StaticResource Primary}" x:Name="passwordEntry" IsPassword="True" TextColor="{StaticResource Primary}"/>
-            <Entry Placeholder="Powtórz Hasło" PlaceholderColor="{StaticResource Primary}" x:Name="confirmEntry" IsPassword="True" TextColor="{StaticResource Primary}"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
-            <RelativeLayout Padding="25">
-                <CheckBox Color="{StaticResource Primary}" IsChecked="False"/>
-                <Label Text="Pokaż hasło" TextColor="{StaticResource Primary}" FontSize="14"
-                   RelativeLayout.XConstraint="50" RelativeLayout.YConstraint="6"/>
-            </RelativeLayout>
+            <Image Source="tlo.jpg" Aspect="AspectFill" Grid.Row="0" Grid.Column="0" />
 
-            <StackLayout Padding="0, 40">
-                <Button VerticalOptions="Center" Text="Zarejestruj się" Clicked="OnClickRegister" CornerRadius="15" />
+            <StackLayout Padding="2"
+                         VerticalOptions="CenterAndExpand"
+                         Spacing="20"
+                         HorizontalOptions="CenterAndExpand">
+
+                <Label Text="Rejestracja"
+                       TextColor="White"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"
+                       Margin="0,0,0,189"/>
+
+
+                <Entry Placeholder="Nazwa Użytkownika"
+                       PlaceholderColor="Black"
+                       x:Name="nameEntry"
+                       TextColor="Black"
+                       BackgroundColor="LightGray"
+                       WidthRequest="2000"
+                       HeightRequest="40"/>
+
+
+                <Entry Placeholder="Adres e-mail"
+                       PlaceholderColor="Black"
+                       x:Name="emailEntry"
+                       TextColor="Black"
+                       BackgroundColor="LightGray"/>
+
+                <Entry Placeholder="Hasło"
+                       PlaceholderColor="Black"
+                       x:Name="passwordEntry"
+                       IsPassword="True"
+                       TextColor="Black"
+                       BackgroundColor="LightGray"/>
+
+                <Entry Placeholder="Powtórz Hasło"
+                       PlaceholderColor="Black"
+                       x:Name="confirmEntry"
+                       IsPassword="True"
+                       TextColor="Black"
+                       BackgroundColor="LightGray"/>
+
+                <RelativeLayout Padding="20"
+                                HorizontalOptions="Center">
+
+                    <CheckBox Color="Black"
+                              IsChecked="False"
+                              CheckedChanged="CheckBox_CheckedChanged"/>
+
+                    <Label Text="Pokaż hasło"
+                           TextColor="Black"
+                           FontSize="14"
+                           RelativeLayout.XConstraint="50"
+                           RelativeLayout.YConstraint="6"/>
+
+                </RelativeLayout>
+
+                <Button Text="Zarejestruj się"
+                        BackgroundColor="#007AFF"
+                        TextColor="White"
+                        FontSize="24"
+                        TextTransform="None"
+                        FontAttributes="Bold"
+                        CornerRadius="10"
+                        Clicked="OnClickRegister"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"
+                        Margin="0,0,0,0"
+                        HeightRequest="60"
+                        WidthRequest="200">
+
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="Blue" Offset="0.1" />
+                            <GradientStop Color="Black" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+
+                </Button>
+
             </StackLayout>
-
-            <RelativeLayout Padding="5">
-                <Label Text="Masz już konto?" TextColor="{StaticResource Primary}" FontSize="14"
-                RelativeLayout.XConstraint="0" RelativeLayout.YConstraint="6"/>
-                <Button Text="Zaloguj się teraz!" FontSize="14" CornerRadius="15"
-                RelativeLayout.XConstraint="170" RelativeLayout.YConstraint="-8"  TextTransform="None" Command="{Binding GoToLoginCommand}" />
-            </RelativeLayout>
-        </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
