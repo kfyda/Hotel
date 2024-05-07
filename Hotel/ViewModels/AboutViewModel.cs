@@ -13,12 +13,15 @@ namespace Hotel.ViewModels
             Title = "Strona główna";
             OpenWebCommand = new Command(async () => await Shell.Current.GoToAsync(nameof(RoomsPage)));
             PhoneNumber = "123456789";
-            StreetName = "Jagiellońska 1";
+            StreetName = "Lwowska 1";
             CompanyName = "Hotel-Kamilos";
+            EmailAddress = "kamil@test.com";
         }
         public string PhoneNumber { get; set; }
         public string StreetName { get; set; }
         public string CompanyName { get; set; }
+        public string EmailAddress { get; set; }
+
         public ICommand OpenWebCommand { get; }
     }
 }

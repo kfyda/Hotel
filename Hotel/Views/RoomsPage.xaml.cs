@@ -28,23 +28,28 @@ namespace Hotel.Views
             InitializeComponent();
             _viewModel = new RoomsViewModel();
             BindingContext = _viewModel;
-            Title = "Pokoje";
+            Title = "Rezerwacja pokoi";
 
             var addButton = new Button { Text = "Dodaj pokój", BackgroundColor = Color.Green, TextColor = Color.White };
             addButton.Clicked += OnAddButtonClicked;
 
             picker = new Xamarin.Forms.Picker
             {
-                Title = "Wybierz rodzaj pokoju",
+                Title = "Wybierz rodzaj pokoju...",
                 Items = { "Jednoosobowy (doba) - 100 zł", "Jednoosobowy (doba) + wyżywienie - 150 zł", "Dwuosobowy (doba) - 200 zł", "Dwuosobowy (doba) + wyżywienie - 250 zł", "Trzyosobowy (doba) - 300 zł", "Trzyosobowy (doba) + wyżywienie - 350 zł", "Czteroosobowy (doba) - 400 zł", "Czteroosobowy (doba) + wyżywienie - 450 zł" }
             };
+            picker.TextColor = Color.Black;
+            picker.TitleColor = Color.Black; // Ustawienie koloru tekstu na czarny
+
+
 
             datePicker = new DatePicker
             {
                 Format = "D",
                 MinimumDate = DateTime.Now,
                 MaximumDate = DateTime.Now.AddYears(1), // Ograniczenie wyboru daty do jednego roku od dzisiaj
-                Date = DateTime.Now // Ustawienie domyślnej daty na dzisiaj
+                Date = DateTime.Now, // Ustawienie domyślnej daty na dzisiaj
+                TextColor = Color.Black // Ustawienie koloru tekstu na czarny
             };
 
             var listView = new Xamarin.Forms.ListView();
@@ -53,6 +58,7 @@ namespace Hotel.Views
             {
                 var label = new Label();
                 label.SetBinding(Label.TextProperty, "Type");
+                label.TextColor = Color.Black;
 
                 var deleteButton = new Button { Text = "Usuń", BackgroundColor = Color.Red, TextColor = Color.White };
                 deleteButton.Clicked += OnDeleteButtonClicked;
@@ -70,11 +76,14 @@ namespace Hotel.Views
             });
 
             var summaryLabel = new Label { Text = "Wybrane pokoje:", FontAttributes = FontAttributes.Bold, Margin = new Thickness(10, 5) };
+            summaryLabel.TextColor = Color.Black;
             summaryListView = new Xamarin.Forms.ListView(); // Inicjalizacja listy wybranych pokojów
             summaryListView.ItemTemplate = new DataTemplate(() =>
             {
                 var roomLabel = new Label();
                 var dateLabel = new Label(); // Dodanie etykiety na datę rezerwacji
+                roomLabel.TextColor = Color.Black;
+                dateLabel.TextColor = Color.Black;
 
                 roomLabel.SetBinding(Label.TextProperty, "Type");
                 dateLabel.SetBinding(Label.TextProperty, "ReservationDate", stringFormat: "Data rezerwacji: {0:D}"); // Formatowanie daty na tekst
@@ -91,6 +100,7 @@ namespace Hotel.Views
 
             var orderButton = new Button { Text = "Zamów i zapłać", BackgroundColor = Color.Blue, TextColor = Color.White };
             orderButton.Clicked += OnOrderButtonClicked;
+            totalLabel.TextColor = Color.Black;
 
             Content = new StackLayout
             {
@@ -124,8 +134,6 @@ namespace Hotel.Views
             summaryListView.ItemsSource = selectedRooms; // Aktualizacja widoku listy
         }
 
-
-
         private async void OnDeleteButtonClicked(object sender, EventArgs e)
         {
             var button = (Button)sender;
@@ -153,9 +161,6 @@ namespace Hotel.Views
                 summaryListView.ItemsSource = selectedRooms; // Aktualizacja widoku listy
             }
         }
-
-
-
 
         private async void OnSelectButtonClicked(object sender, EventArgs e)
         {

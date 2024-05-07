@@ -15,22 +15,26 @@
                FontAttributes="Bold"
                HorizontalOptions="Center"
                VerticalOptions="Start"
-               Margin="125,70,0,189"/> 
+               Margin="120,70,0,0"/> 
             <!-- Zwiększony odstęp od góry -->
-            <StackLayout Padding="2,370,0,0" VerticalOptions="CenterAndExpand" Spacing="20">
-                <Entry Placeholder="E-mail" PlaceholderColor="Black" x:Name="emailEntry" TextColor="Black" BackgroundColor="LightGray" />
-                <Entry Placeholder="Hasło" PlaceholderColor="Black" x:Name="passwordEntry" IsPassword="True" TextColor="Black" BackgroundColor="LightGray" />
+            <StackLayout Padding="2,280,0,0" VerticalOptions="CenterAndExpand" Spacing="20">
+                <Frame CornerRadius="30" BackgroundColor="LightGray">
+                    <Entry Placeholder="E-mail" PlaceholderColor="Black" x:Name="emailEntry" TextColor="Black" />
+                </Frame>
 
-                <RelativeLayout Padding="1" HorizontalOptions="Center">
+                <Frame CornerRadius="30" BackgroundColor="LightGray">
+                    <Entry Placeholder="Hasło" PlaceholderColor="Black" x:Name="passwordEntry" IsPassword="True" TextColor="Black" />
+                </Frame>
+
+                <RelativeLayout HorizontalOptions="Center">
                     <CheckBox Color="Black" IsChecked="False"/>
-                    <Label Text="Pokaż hasło" TextColor="Black" FontSize="18"
-                           RelativeLayout.XConstraint="40" RelativeLayout.YConstraint="5"/>
-                    <CheckBox Color="Black"
-                          IsChecked="False"
-                          CheckedChanged="CheckBox_CheckedChanged"/>
-                    <Button Text="Zapominałeś hasła?" TextColor="Black" BackgroundColor="Transparent" FontSize="18"
-                           RelativeLayout.XConstraint="150" RelativeLayout.YConstraint="-5" TextTransform="None" />
+                    <Label Text="Pokaż hasło" TextColor="Black" FontSize="18" FontAttributes="Bold"
+           RelativeLayout.XConstraint="40" RelativeLayout.YConstraint="4"/>
+                    <CheckBox Color="Black" IsChecked="False" CheckedChanged="CheckBox_CheckedChanged"/>
+                    <Button Text="Zapominałeś hasła?" FontAttributes="Bold" TextColor="Black" BackgroundColor="Transparent" FontSize="18" Clicked="ForgotPasswordButton_Clicked"
+            RelativeLayout.XConstraint="145" RelativeLayout.YConstraint="-6" TextTransform="None"  />
                 </RelativeLayout>
+
 
                 <Button Text="Zaloguj się" BackgroundColor="#007AFF" TextColor="White" FontSize="24" TextTransform="None" FontAttributes="Bold" CornerRadius="10" Clicked="OnClickedLogin"
                 HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Margin="0, 0, 0, 0"

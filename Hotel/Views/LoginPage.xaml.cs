@@ -67,6 +67,10 @@ namespace Hotel.Views
         {
             passwordEntry.IsPassword = !e.Value;
         }
+        private void ForgotPasswordButton_Clicked(object sender, EventArgs e)
+        {
+            Device.OpenUri(new Uri("https://mail.google.com/mail/u/0/"));
+        }
 
     }
 }

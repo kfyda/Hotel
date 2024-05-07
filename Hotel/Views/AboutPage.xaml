@@ -1,8 +1,9 @@
 ﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Hotel.Views.AboutPage"
              xmlns:vm="clr-namespace:Hotel.ViewModels"
-             Title="{Binding Title}">
+             x:Class="Hotel.Views.AboutPage"
+             Title="{Binding Title}"
+             BackgroundImageSource="foto.jpg">
 
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
@@ -10,45 +11,59 @@
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Color x:Key="BackgroundColor">#192637</Color>
             <Color x:Key="Accent">#96d1ff</Color>
             <Color x:Key="Primary">#0078d4</Color>
             <Color x:Key="TextColor">White</Color>
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <ScrollView BackgroundColor="{StaticResource BackgroundColor}">
+    <ScrollView>
         <!-- Usunięcie zbędnego StackLayout -->
-        <StackLayout Padding="0" Spacing="0">
-            <!-- StackLayout dla reszty zawartości -->
-            <StackLayout HorizontalOptions="Center" Margin="0,20" BackgroundColor="{StaticResource BackgroundColor}">
-                <!-- StackLayout dla loga i tytułu -->
-                <Image Source="kamilos.png" VerticalOptions="Center" HeightRequest="300" />
+        <StackLayout Padding="0" Spacing="-80">
+            <!-- StackLayout dla loga i tytułu -->
+            <StackLayout HorizontalOptions="Center" Margin="0,0">
+                <Image Source="kamilos.png" VerticalOptions="Center" HeightRequest="400" />
                 <!-- Tytuł -->
             </StackLayout>
-            <StackLayout Padding="60" BackgroundColor="{StaticResource BackgroundColor}">
-                <Label Text="Witamy na oficjalnej stronie naszego ekskluzywnego hotelu!"
-                       FontSize="17" 
-                       HorizontalOptions="Center" 
-                       VerticalOptions="Center" 
-                       TextColor="{StaticResource TextColor}"
-                       Padding="15,0,0,0" />
+
+            <!-- StackLayout dla treści informacyjnej -->
+            <StackLayout Padding="60" VerticalOptions="CenterAndExpand" Margin="0,-100,0,0">
 
                 <!-- Treść informacyjna -->
-                <Button Margin="0,20,0,0" Text="ZAREZERWUJ POKÓJ JUŻ TERAZ!"
+                <Button Margin="0,20,0,0" Padding="10,30,10,30" Text="ZAREZERWUJ POKÓJ 
+                        JUŻ TERAZ!"
                         Command="{Binding OpenWebCommand}"
-                        BackgroundColor="{StaticResource Primary}"
                         CornerRadius="15"
-                        TextColor="{StaticResource TextColor}" />
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        TextColor="{StaticResource TextColor}">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="Blue" Offset="0.1" />
+                            <GradientStop Color="Black" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+
                 <!-- Przycisk rezerwacji pokoju -->
             </StackLayout>
+
+            <!-- Przycisk kontaktu -->
             <Button Text="Kontakt"
                     Clicked="OnContactButtonClicked"
                     HorizontalOptions="Center"
                     VerticalOptions="End"
-                    Margin="0,0,0,20"
-                    TextColor="{StaticResource TextColor}" />
-            <!-- Przycisk kontaktu -->
+                    Margin="0,0,0,100"
+                    Padding="20,0,20,0"
+                    TextColor="{StaticResource TextColor}"
+                    FontAttributes="Bold">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="1,0">
+                        <GradientStop Color="Blue" Offset="0.1" />
+                        <GradientStop Color="Black" Offset="1.0" />
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
         </StackLayout>
     </ScrollView>
 </ContentPage>

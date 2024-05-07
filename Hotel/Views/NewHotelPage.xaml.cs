@@ -21,7 +21,7 @@ namespace Hotel.Views
         {
             InitializeComponent();
 
-            Title = "Dodaj nowy hotel";
+            Title = "Otwieranie nowych hoteli";
             GetHotels();
         }
         protected override async void OnAppearing()
@@ -62,6 +62,7 @@ namespace Hotel.Views
                     Latitude = double.Parse(latitude.Text),
                     Longitude = double.Parse(longitude.Text)
                 });
+                GetHotels();
 
                 // Resetowanie pól po pomyślnym dodaniu
                 nameEntry.Text = cityEntry.Text = streetEntry.Text = streetNrEntry.Text = latitude.Text = longitude.Text = string.Empty;
@@ -81,6 +82,7 @@ namespace Hotel.Views
             var hotelToDelete = (Hotels)hotelEntry.SelectedItem;
             await App.Database.DeleteHotelAsync(hotelToDelete);
             hotelEntry.SelectedItem = null;
+            GetHotels();
         }
         private async void GetHotels()
         {

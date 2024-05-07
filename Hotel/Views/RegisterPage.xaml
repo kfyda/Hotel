@@ -26,37 +26,43 @@
                        FontAttributes="Bold"
                        HorizontalOptions="Center"
                        VerticalOptions="Start"
-                       Margin="0,0,0,189"/>
+                       Margin="0,0,0,30"/>
 
-
-                <Entry Placeholder="Nazwa Użytkownika"
+                <Frame CornerRadius="30" BackgroundColor="LightGray">
+                    <Entry Placeholder="Nazwa Użytkownika"
                        PlaceholderColor="Black"
                        x:Name="nameEntry"
                        TextColor="Black"
                        BackgroundColor="LightGray"
                        WidthRequest="2000"
                        HeightRequest="40"/>
+                </Frame>
 
-
-                <Entry Placeholder="Adres e-mail"
+                <Frame CornerRadius="30" BackgroundColor="LightGray">
+                    <Entry Placeholder="Adres e-mail"
                        PlaceholderColor="Black"
                        x:Name="emailEntry"
                        TextColor="Black"
                        BackgroundColor="LightGray"/>
+                </Frame>
 
-                <Entry Placeholder="Hasło"
+                <Frame CornerRadius="30" BackgroundColor="LightGray">
+                    <Entry Placeholder="Hasło"
                        PlaceholderColor="Black"
                        x:Name="passwordEntry"
                        IsPassword="True"
                        TextColor="Black"
                        BackgroundColor="LightGray"/>
+                </Frame>
 
-                <Entry Placeholder="Powtórz Hasło"
+                <Frame CornerRadius="30" BackgroundColor="LightGray">
+                    <Entry Placeholder="Powtórz Hasło"
                        PlaceholderColor="Black"
                        x:Name="confirmEntry"
                        IsPassword="True"
                        TextColor="Black"
                        BackgroundColor="LightGray"/>
+                </Frame>
 
                 <RelativeLayout Padding="20"
                                 HorizontalOptions="Center">
@@ -67,9 +73,10 @@
 
                     <Label Text="Pokaż hasło"
                            TextColor="Black"
-                           FontSize="14"
-                           RelativeLayout.XConstraint="50"
-                           RelativeLayout.YConstraint="6"/>
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           RelativeLayout.XConstraint="40"
+                           RelativeLayout.YConstraint="3"/>
 
                 </RelativeLayout>
 

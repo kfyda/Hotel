@@ -18,7 +18,7 @@ namespace Hotel.Views
             var viewModel = (AboutViewModel)BindingContext;
 
             // Wyświetl okno dialogowe z danymi kontaktowymi
-            await DisplayAlert("Kontakt", $"Numer telefonu: {viewModel.PhoneNumber}\nUlica: {viewModel.StreetName}\nNazwa firmy: {viewModel.CompanyName}", "OK");
+            await DisplayAlert("Kontakt", $"Nazwa hotelu: {viewModel.CompanyName}\nNumer telefonu: {viewModel.PhoneNumber}\nAdres e-mail: {viewModel.EmailAddress}\nUlica: {viewModel.StreetName}", "OK");
         }
     }
 }

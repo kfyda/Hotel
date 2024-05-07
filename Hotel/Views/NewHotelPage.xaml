@@ -2,54 +2,77 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Hotel.Views.NewHotelPage"
-             Title="{Binding Title}"
-             BackgroundColor="#192637">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Color x:Key="TextColor">White</Color>
-        </ResourceDictionary>
-    </ContentPage.Resources>
+             Title="{Binding Title}">
 
-    <StackLayout>
-        <Label Text="Nazwa hotelu" TextColor="{StaticResource TextColor}" />
-        <Entry x:Name="nameEntry" TextColor="{StaticResource TextColor}" />
+    <ContentPage.Content>
+        <!-- Ustawienie obrazu jako tła strony -->
+        <Grid>
+            <Image Source="foto.jpg" Aspect="AspectFill" />
 
-        <Label Text="Miasto" TextColor="{StaticResource TextColor}" />
-        <Entry x:Name="cityEntry" TextColor="{StaticResource TextColor}" />
+            <!-- Pozostała zawartość strony -->
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="20">
+                <Label Text="Nazwa hotelu" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Frame CornerRadius="30" BackgroundColor="LightGray" Padding="10">
+                    <Entry x:Name="nameEntry" TextColor="Black" />
+                </Frame>
 
-        <Label Text="Ulica" TextColor="{StaticResource TextColor}" />
-        <Entry x:Name="streetEntry" TextColor="{StaticResource TextColor}" />
+                <Label Text="Miasto" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Frame CornerRadius="30" BackgroundColor="LightGray" Padding="10">
+                    <Entry x:Name="cityEntry" TextColor="Black" />
+                </Frame>
 
-        <Label Text="Numer Ulicy" TextColor="{StaticResource TextColor}" />
-        <Entry x:Name="streetNrEntry" TextColor="{StaticResource TextColor}" />
+                <Label Text="Ulica" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Frame CornerRadius="30" BackgroundColor="LightGray" Padding="10">
+                    <Entry x:Name="streetEntry" TextColor="Black" />
+                </Frame>
+                <Label Text="Numer Ulicy" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"/>
+                <Frame CornerRadius="30" BackgroundColor="LightGray" Padding="10">
+                    <Entry x:Name="streetNrEntry" TextColor="Black" />
+                </Frame>
+               
 
-        <Button Text="Dodaj hotel" Clicked="AddHotel" BackgroundColor="#0078d4" TextColor="{StaticResource TextColor}" />
-        <Button Text="Koordynaty" Clicked="CoordHotel" BackgroundColor="#0078d4" TextColor="{StaticResource TextColor}" />
+                <!-- Przyciski z gradientowym tłem -->
+                <Button Margin="0,15,0,0" Text="Szukaj" Clicked="CoordHotel" TextColor="White" CornerRadius="15" FontAttributes="Bold">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="Blue" Offset="0.1" />
+                            <GradientStop Color="Black" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
 
-        <Picker ItemDisplayBinding="{Binding Name}" TextColor="{StaticResource TextColor}"
-        x:Name="hotelEntry"
-        Title="Wybierz hotel do usunięcia" />
-        <Button Text="Usuń" Clicked="DeleteHotel" BackgroundColor="#0078d4" TextColor="{StaticResource TextColor}" />
+                <Button Margin="0,0,0,15" Text="Dodaj hotel" Clicked="AddHotel" TextColor="White" CornerRadius="15" FontAttributes="Bold">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="1,0">
+                            <GradientStop Color="Blue" Offset="0.1" />
+                            <GradientStop Color="Black" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
 
 
-        <Label x:Name="latitude" TextColor="{StaticResource TextColor}" />
-        <Label x:Name="longitude" TextColor="{StaticResource TextColor}" />
+                <Frame CornerRadius="30" BackgroundColor="LightGray" Padding="10">
+                    <Picker ItemDisplayBinding="{Binding Name}" TextColor="Black"
+                    x:Name="hotelEntry"
+                    Title="Wybierz hotel do usunięcia..." 
+                    FontAttributes="Italic"
+                    TitleColor="Black"/>
+                </Frame>
+                <Button Text="Usuń" Clicked="DeleteHotel" BackgroundColor="Red" TextColor="White" CornerRadius="15" FontAttributes="Bold"/>
 
-        <StackLayout>
-            <Label Text="Lista hoteli" TextColor="#192637" />
-            <CollectionView x:Name="collectionHotel">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout>
-                            <Label Text="{Binding Id}" FontSize="Medium" TextColor="#192637" />
-                            <Label Text="{Binding Name}" FontSize="Small" TextColor="White" />
-                            <Label Text="{Binding City}" FontSize="Small" TextColor="#192637" />
-                            <Label Text="{Binding Street}" FontSize="Small" TextColor="#192637" />
-                            <Label Text="{Binding StreetNr}" FontSize="Small" TextColor="#192637" />
-                        </StackLayout>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </StackLayout>
-    </StackLayout>
+
+                <Label x:Name="latitude" TextColor="White" />
+                <Label x:Name="longitude" TextColor="White" />
+
+                <CollectionView x:Name="collectionHotel">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>

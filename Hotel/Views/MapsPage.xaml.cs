@@ -20,7 +20,7 @@ namespace Hotel.Views
         {
             InitializeComponent();
             var hotels = App.Database.GetHotelAsync().Result;
-            Title = "Hotel Kamilos";
+            Title = "Gdzie znajdują się nasze hotele?";
 
             // Utwórz mapę
             Xamarin.Forms.Maps.Map map = new Xamarin.Forms.Maps.Map
