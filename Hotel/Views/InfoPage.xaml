@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Hotel.Views.InfoPage"
+             BackgroundImageSource="foto.jpg">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" Padding="15" Spacing="10">
+            <Label Text="Hotel Kamilos"
+           FontSize="30"
+           FontAttributes="Bold"
+           HorizontalOptions="Center"
+           TextColor="White"/>
+
+            <StackLayout VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" Padding="20" Spacing="10">
+                <Label Text="To wyjątkowe miejsce dla współczesnego człowieka, 
+                       który mając wiele obowiązków poszukuje odprężenia i chwili dla siebie."
+           TextColor="White"
+           FontSize="20"
+           FontAttributes="Italic"/>
+
+                <Label Text="To hotel, w którym tradycja jak również historia spotykają komfort i nowoczesność."
+           TextColor="White"
+           FontSize="20"
+           FontAttributes="Italic"/>
+
+                <Label Text="Hotel Kamilos to również miejsce ważnych spotkań biznesowych."
+           TextColor="White"
+           FontSize="20"
+           FontAttributes="Italic"/>
+
+                <Label Text="Nasz hotel to oaza spokoju pośród miejskiego zgiełku, zapewniająca komfortowe 
+                       
+                       warunki i niezapomniane 
+                       wrażenia."
+           TextColor="White"
+           FontSize="20"
+           FontAttributes="Italic"/>
+
+                <Label Text="Nasz hotel to nie tylko miejsce noclegowe, to również centrum spotkań, wydarzeń i inspiracji, 
+                       które pozostaną w pamięci na długo."
+           TextColor="White"
+           FontSize="20"
+           FontAttributes="Italic"/>
+
+            </StackLayout>
+
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

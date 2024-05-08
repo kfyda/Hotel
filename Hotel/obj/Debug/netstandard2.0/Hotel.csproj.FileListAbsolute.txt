@@ -45,3 +45,4 @@ C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel\obj\Debug\netstandard2.0\Views\RoomsP
 C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel\obj\Debug\netstandard2.0\Hotel.sourcelink.json
 C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel\obj\Debug\netstandard2.0\Views\MapsPage.xaml.g.cs
 C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel\obj\Debug\netstandard2.0\Views\NewHotelPage.xaml.g.cs
+C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel\obj\Debug\netstandard2.0\Views\InfoPage.xaml.g.cs

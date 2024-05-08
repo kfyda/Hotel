@@ -23,3 +23,4 @@ C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel\obj\Release\netstandard2.0\Hotel.dll
 C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel\obj\Release\netstandard2.0\refint\Hotel.dll
 C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel\obj\Release\netstandard2.0\Hotel.pdb
 C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel\obj\Release\netstandard2.0\Views\NewHotelPage.xaml.g.cs
+C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel\obj\Release\netstandard2.0\Views\InfoPage.xaml.g.cs

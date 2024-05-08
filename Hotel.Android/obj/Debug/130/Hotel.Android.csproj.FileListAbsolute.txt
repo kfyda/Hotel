@@ -1484,3 +1484,11 @@ C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel.Android\obj\Debug\130\androidx\progua
 C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel.Android\obj\Debug\130\androidx\proguard\f1099b98-f078-47b4-b9db-dbcd2e28bb2c.txt
 C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel.Android\obj\Debug\130\androidx\proguard\f2ad5ebd-9c17-4b31-b7e1-c5fb403f2c12.txt
 C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel.Android\obj\Debug\130\res\drawable\foto.jpg
+C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel.Android\obj\Debug\130\res\drawable\icon_about1.png
+C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel.Android\obj\Debug\130\res\drawable\icon_feed1.png
+C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel.Android\obj\Debug\130\res\drawable\cennik.png
+C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel.Android\obj\Debug\130\res\drawable\mapa.png
+C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel.Android\obj\Debug\130\res\drawable\plus.png
+C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel.Android\obj\Debug\130\res\drawable\wyloguj.png
+C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel.Android\obj\Debug\130\res\drawable\my.png
+C:\Users\kamil\OneDrive\Pulpit\Hotel\Hotel.Android\obj\Debug\130\res\drawable\xamarin_logo1.png
