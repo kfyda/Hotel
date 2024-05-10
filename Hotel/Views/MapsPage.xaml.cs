@@ -19,8 +19,18 @@ namespace Hotel.Views
         public MapsPage()
         {
             InitializeComponent();
-            var hotels = App.Database.GetHotelAsync().Result;
             Title = "Gdzie znajdują się nasze hotele?";
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            await ResetMapAsync(); // Resetujemy mapę przy pojawieniu się strony
+        }
+
+        private async Task ResetMapAsync()
+        {
+            var hotels = await App.Database.GetHotelAsync();
 
             // Utwórz mapę
             Xamarin.Forms.Maps.Map map = new Xamarin.Forms.Maps.Map
@@ -29,21 +39,18 @@ namespace Hotel.Views
                 MoveToLastRegionOnLayoutChange = false
             };
 
-            // Ustaw punkt startowy na bieżącą lokalizację
-            Device.BeginInvokeOnMainThread(async () =>
-            {
-                var locator = CrossGeolocator.Current;
-                locator.DesiredAccuracy = 50;
+            // Punkt startowy na bieżącą lokalizację
+            var locator = CrossGeolocator.Current;
+            locator.DesiredAccuracy = 50;
 
-                var position = await locator.GetPositionAsync(TimeSpan.FromSeconds(10));
-                map.MoveToRegion(MapSpan.FromCenterAndRadius(
-                    new Position(position.Latitude, position.Longitude), Distance.FromKilometers(1)));
-            });
+            var position = await locator.GetPositionAsync(TimeSpan.FromSeconds(10));
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(
+                new Position(position.Latitude, position.Longitude), Distance.FromKilometers(1)));
 
             foreach (var hotel in hotels)
             {
                 string address = hotel.City + " " + hotel.Street + " " + hotel.StreetNr;
-                // Utwórz punkt na mapie
+                // Utworzenie punktu na mapie
                 Pin pin = new Pin
                 {
                     Label = hotel.Name,
@@ -91,6 +98,7 @@ namespace Hotel.Views
                 // Dodaj punkt do mapy
                 map.Pins.Add(pin);
             }
+
             // Ustaw mapę jako zawartość strony
             Content = new StackLayout
             {

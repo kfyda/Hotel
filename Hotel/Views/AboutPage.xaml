@@ -18,18 +18,11 @@
     </ContentPage.Resources>
 
     <ScrollView>
-        <!-- Usunięcie zbędnego StackLayout -->
         <StackLayout Padding="0" Spacing="-80">
-            <!-- StackLayout dla loga i tytułu -->
             <StackLayout HorizontalOptions="Center" Margin="0,0">
                 <Image Source="kamilos.png" VerticalOptions="Center" HeightRequest="400" />
-                <!-- Tytuł -->
             </StackLayout>
-
-            <!-- StackLayout dla treści informacyjnej -->
             <StackLayout Padding="60" VerticalOptions="CenterAndExpand" Margin="0,-100,0,0">
-
-                <!-- Treść informacyjna -->
                 <Button Margin="0,20,0,0" Padding="10,30,10,30" Text="ZAREZERWUJ POKÓJ 
                         JUŻ TERAZ!"
                         Command="{Binding OpenWebCommand}"
@@ -44,11 +37,7 @@
                         </LinearGradientBrush>
                     </Button.Background>
                 </Button>
-
-                <!-- Przycisk rezerwacji pokoju -->
             </StackLayout>
-
-            <!-- Przycisk kontaktu -->
             <Button Text="Kontakt"
                     Clicked="OnContactButtonClicked"
                     HorizontalOptions="Center"

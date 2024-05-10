@@ -96,7 +96,7 @@ namespace Hotel.Views
                 return new ViewCell { View = layout };
             });
 
-            totalLabel = new Label { Text = "Całkowita cena: 0 zł", FontAttributes = FontAttributes.Bold, Margin = new Thickness(10, 5) }; // Inicjalizacja etykiety totalLabel
+            totalLabel = new Label { Text = "Całkowita cena:0 zł", FontAttributes = FontAttributes.Bold, Margin = new Thickness(10, 5) }; // Inicjalizacja etykiety totalLabel
 
             var orderButton = new Button { Text = "Zamów i zapłać", BackgroundColor = Color.Blue, TextColor = Color.White };
             orderButton.Clicked += OnOrderButtonClicked;
@@ -167,13 +167,13 @@ namespace Hotel.Views
             var button = (Button)sender;
             var room = (Room)button.BindingContext;
 
-            await DisplayAlert("Wybrany pokój", $"Wybrano pokój {room.Type}", "OK");
+            await DisplayAlert("Wybrany pokój", $"{room.Type}", "OK");
         }
 
         private async void OnOrderButtonClicked(object sender, EventArgs e)
         {
             // Tutaj możesz dodać kod obsługi zamówienia i płatności
-            await DisplayAlert("Zamówienie złożone", $"Twoje zamówienie zostało pomyślnie złożone. Całkowita cena: {totalPrice} zł", "OK");
+            await DisplayAlert("Zamówienie złożone", $"Twoje zamówienie zostało pomyślnie złożone. \n\nCałkowita cena: {totalPrice} zł", "OK");
         }
 
         private async void Handle_ItemTapped(object sender, ItemTappedEventArgs e)

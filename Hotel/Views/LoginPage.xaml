@@ -58,7 +58,7 @@
                     </Button>
                 </RelativeLayout>
 
-                <Label Text="Lista użytkowników" HorizontalOptions="Center" Margin="0, 70, 0, 0" TextColor="Black"/>
+                <Label Text="" HorizontalOptions="Center" Margin="0, 70, 0, 0" TextColor="Black"/>
                 <CollectionView x:Name="collectionUser">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>

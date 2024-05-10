@@ -26,18 +26,18 @@ namespace Hotel.Views
 
         private async void OnClickedLogin(object sender, EventArgs e)
         {
-            // Pobierz użytkownika z bazy danych na podstawie wprowadzonego adresu e-mail
+            // Pobieranie użytkownika z bazy danych na podstawie wprowadzonego adresu e-mail
             var users = await App.Database.GetUserAsync();
 
-            // Sprawdź, czy istnieje użytkownik o podanym adresie e-mail
+            // Sprawdzanie, czy istnieje użytkownik o podanym adresie e-mail
             var user = users.FirstOrDefault(u => u.Email == emailEntry.Text);
 
             if (user != null)
             {
-                // Jeśli użytkownik istnieje, sprawdź poprawność hasła
+                // Jeśli użytkownik istnieje, sprawdzanie poprawności hasła
                 if (user.Password == passwordEntry.Text)
                 {
-                    // Jeśli hasło jest poprawne, przejdź do następnej strony (np. AboutPage)
+                    // Jeśli hasło jest poprawne, przechodzenie do następnej strony
                     App.Current.Properties["name"] = user.Name;
                     App.Current.Properties["IsLoggedIn"] = true;
                     emailEntry.Text = passwordEntry.Text = string.Empty;
@@ -45,14 +45,14 @@ namespace Hotel.Views
                 }
                 else
                 {
-                    // Jeśli hasło jest niepoprawne, wyświetl komunikat
+                    // Jeśli hasło jest niepoprawne, wyświetlenie komunikatu
                     emailEntry.Text = passwordEntry.Text = string.Empty;
                     await DisplayAlert("Błąd logowania", "Niepoprawne hasło", "OK");
                 }
             }
             else
             {
-                // Jeśli użytkownik o podanym adresie e-mail nie istnieje, wyświetl komunikat
+                // Jeśli użytkownik o podanym adresie e-mail nie istnieje, wyświetlenie komunikatu
                 emailEntry.Text = passwordEntry.Text = string.Empty;
                 await DisplayAlert("Błąd logowania", "Użytkownik o podanym adresie e-mail nie istnieje", "OK");
             }

@@ -54,7 +54,7 @@
                 <Frame CornerRadius="30" BackgroundColor="LightGray" Padding="10">
                     <Picker ItemDisplayBinding="{Binding Name}" TextColor="Black"
                     x:Name="hotelEntry"
-                    Title="Wybierz hotel do usunięcia..." 
+                    Title="Wybierz hotel do usunięcia..."
                     FontAttributes="Italic"
                     TitleColor="Black"/>
                 </Frame>

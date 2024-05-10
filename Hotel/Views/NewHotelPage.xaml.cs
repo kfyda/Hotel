@@ -79,10 +79,21 @@ namespace Hotel.Views
 
         async void DeleteHotel(object sender, EventArgs e)
         {
+            try { 
             var hotelToDelete = (Hotels)hotelEntry.SelectedItem;
             await App.Database.DeleteHotelAsync(hotelToDelete);
             hotelEntry.SelectedItem = null;
             GetHotels();
+
+                // Wyświetlenie alertu
+                await DisplayAlert("Brawo", "Prawidłowo usunięto hotel, możesz sprawdzić to na mapie!", "OK");
+            }
+            catch
+            {
+                // Wyświetlenie alertu w przypadku niepowodzenia
+                await DisplayAlert("Błąd", "Nie udało się usunąć hotelu", "OK");
+            }
+
         }
         private async void GetHotels()
         {
